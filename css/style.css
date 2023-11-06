@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/*HORIZOINTAL SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+    border: solid #474747;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+    border: solid 1px #ffffff;
+    border-radius: 2px;
+  }
+::-webkit-scrollbar-thumb {
+    background: rgb(72, 72, 72);
+    border-radius: 2px;
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*html {
+  scroll-behavior: smooth;
+}*/
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*page basic style*/
+/*text*/
+.text-primary {
+    color: #eb9411;
+}
+
+.text-muted {
+    color: #bebebe;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: 800;
+}
+
+.l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.m-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.par {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/*padding*/
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-5 {
+    padding: 5rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
+.pt-2 {
+    padding-top: 2rem;
+}
+
+.pt-6 {
+    padding-top: 6rem;
+}
+
+/*buttons*/
+.btn {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background: #eb9411;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #593908;
+}
+
+.btn-dark {
+    background: #333;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background: #593908;
+}
+
+/*background*/
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-dark {
+    background: #333;
+    color: #fff;
+}
+
+.bg-primary {
+    background: #eb9411;
+    color: #333;
+}
+
+
+/*NAVBAR*/
+#navbar {
+    background: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#navbar ul li a {
+    color: #fff;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+    background: #eb9411;
+    color: #333;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#logo {
+    height: 2.75rem;
+    width: auto;
+}
+
+/*showcase*/
+#showcase {
+    background: #333 url(https://kaisaux23.ikt.khk.ee/veebiarendus/firma_website/img/showcase_1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*WHAT*/
+#what {
+    overflow: auto;
+}
+
+#what .items {
+    display: flex;
+}
+
+#what .items .item {
+    flex: 1;
+    margin: 0 2rem;
+    border-radius: 15px;
+    background-color: #ededed;
+    box-shadow: 10px 8px #eb9411;
+}
+
+#what .items .item i {
+    background: #593908;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    color: #f4f4f4;
+}
+
+/*WHO*/
+#who {
+    display: flex;
+}
+
+#who div {
+    flex: 1;
+}
+
+#who .who-img {
+    background: url(https://kaisaux23.ikt.khk.ee/veebiarendus/firma_website/img/people_3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#who ul {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+#who ul li {
+    padding: 0.5rem 0;
+    border-bottom: #444 dotted 1px;
+}
+
+/*CLIENTS*/
+#clients .items {
+    display: flex;
+    justify-content: center;
+}
+
+#clients .items img {
+    display: block;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+
+
+/*CONTACT*/
+#contact {
+    display: flex;
+}
+
+#contact .contact-form,
+#contact .contact-map {
+    flex: 1;
+}
+
+#contact .contact-form .form-group {
+    margin: 0.75rem;
+}
+
+#contact .contact-form .form-group label {
+    display: block;
+}
+
+#contact .contact-form .form-group input,
+#contact .contact-form .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact .contact-form .form-group input:focus,
+#contact .contact-form .form-group textarea:focus {
+    outline: none;
+    border: #333 solid 1px;
+}
+
+/*MAP*/
+#map {
+    width: 100%;
+    /* The width is the width of the web page */
+    height: auto;
+}
+
+/*FOOTER*/
+#footer img {
+    height: 5rem;
+    width: auto;
+    align-items: center;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Kaisa Reimal">
+  <meta name="description" content="Firma üheleheline veebileht">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" media="screen and (max-width: 500px)" href="./css/mobile.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Fontawesome ikoonide sissetoomise script -->
+  <script src="https://kit.fontawesome.com/d00cfd2431.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="./img/firma_logo_icon.ico" type="image/x-icon" />
+  <script>
+    (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+      key: "AIzaSyCJl4bCKHp4L9_h7dbOAtsQs2LFoWp7hqE",
+      v: "weekly",
+      // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+      // Add other bootstrap parameters as needed, using camel case.
+    });
+  </script>
+  <script>
+    // Initialize and add the map
+    let map;
+
+    async function initMap() {
+      // The location of Uluru
+      const position = { lat: 58.34979715830805, lng: 26.71421001349336 };
+      // Request needed libraries.
+      //@ts-ignore
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+      // The map, centered at Uluru
+      map = new Map(document.getElementById("map"), {
+        zoom: 16,
+        center: position,
+        mapId: "DEMO_MAP_ID",
+      });
+
+      // The marker, positioned at Uluru
+      const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Uluru",
+      });
+    }
+
+    initMap();
+  </script>
+
+  <title>AS Firma</title>
+</head>
+
+<body id="home">
+  <!-- navbar -->
+  <!-- navbar -->
+  <nav id="navbar">
+    <a href="#home" id="cont-logo"><img id="logo"
+        src="https://kaisaux23.ikt.khk.ee/veebiarendus/firma_website/img/firma_logo.png" alt="Firma logo"></a>
+    <ul>
+      <li><a href="#home">Avaleht</a></li>
+      <li><a href="#what">Teenused</a></li>
+      <li><a href="#who">Meist</a></li>
+      <li><a href="#clients">Kliendid</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+  <!-- header - showcase -->
+  <header id="showcase">
+    <div class="showcase-content">
+      <h1 class="l-heading">Lihtsalt Tee Midagi!</h1>
+      <p class="par">Me oleme teie partneriks, et muuta digitaalne maailm paremaks ja kaunimaks.
+        <br>Oleme UX/UI disaini eksperdid, kes loovad intuitiivseid ja silmapaistvaid kasutajakogemusi.
+        <br><br>Astuge sisse meie loomingulisse maailma ja laske meil teie ideed ellu viia!
+      </p>
+      <a class="btn btn-primary" href="#what">Loe rohkem</a>
+    </div>
+  </header>
+
+  <!-- #what -->
+  <section id="what" class="bg-light py-5">
+    <div class="container">
+      <h2 class="m-heading text-center py-1">Mida me <span class="text-primary">PAKUME</span></h2>
+      <div class="items">
+        <div class="item text-center p-3">
+          <i class="fa-solid fa-swatchbook p-1"></i>
+          <div>
+            <h3>UI disain</h3>
+            <p>Meie UI disainer keskendub teie veebilehe või rakenduse välimusele ja tundele. Ta loob visuaalselt
+              atraktiivseid kasutajaliideselemente, sealhulgas värviskeeme, tüpograafiat ja graafilisi elemente, et
+              tagada kasutajate jaoks pilkupüüdev ja kergesti mõistetav disain.</p>
+          </div>
+        </div>
+        <div class="item text-center p-3">
+          <i class="fa-solid fa-universal-access p-1"></i>
+          <div>
+            <h3>UX disain</h3>
+            <p>Meie UX disaini teenus keskendub sellele, kuidas teie veebileht või rakendus suhtleb ja kuidas see teie
+              kasutajate jaoks toimib. Loome kasutajasõbralikke lahendusi, mis põhinevad põhjalikul kasutajauuringul ja
+              analüüsil, tagades suurepärase kasutajakogemuse.</p>
+          </div>
+        </div>
+        <div class="item text-center p-3">
+          <i class="fa-solid fa-code p-1"></i>
+          <div>
+            <h3>Front-end arendus</h3>
+            <p>Front-end arenduse teenus hõlmab tehnilist rakendamist, et muuta disain reaalseteks veebilehtedeks või
+              rakendusteks. Meie arendajad tagavad, et kasutajaliides oleks mitte ainult kaunis, vaid ka funktsionaalne.
+              Nad kasutavad uusimaid tehnoloogiaid ja programmeerimiskeeli, et luua dünaamilisi ja interaktiivseid
+              veebilahendusi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- #who -->
+  <section id="who">
+    <!-- img -->
+    <div class="who-img"></div>
+    <!-- text content -->
+    <div class="bg-dark p-3">
+      <h2 class="m-heading">Kes <span class="text-primary">MEIE</span> oleme</h2>
+      <p>Oleme kirglikud ja loovad disainerid ning arendajad, kes pühenduvad suurepärase kasutajakogemuse ja visuaalselt
+        kauni disaini loomisele. Oleme uhked oma töö üle ja oleme valmis aitama teil oma digitaalseid unistusi ellu
+        viia.
+      </p>
+      <h3 class="pt-2">Meie meeskond</h3>
+      <div class="employ">
+        <ul>
+          <li>
+            <p class="text-primary text-bold">Sarah Johnson</p>
+            <p class="text-muted">Senior UX Disainer</p>
+          </li>
+          <li>
+            <p class="text-primary text-bold">Alex Martinez</p>
+            <p class="text-muted">UI Disainer</p>
+          </li>
+          <li>
+            <p class="text-primary text-bold">David Wong</p>
+            <p class="text-muted">UX Analüütik</p>
+          </li>
+          <li>
+            <p class="text-primary text-bold">Emily Parker</p>
+            <p class="text-muted">Interaktsiooni Disainer</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- #clients -->
+  <section id="clients">
+    <div class="bg-light py-5">
+      <h2 class="m-heading text-center">Meie <span class="text-primary">KLIENDID</span></h2>
+      <div class="py-1 items">
+        <div><img src="./img/logo_1.png" alt="Klient1"></div>
+        <div class="pt-6"><img src="./img/logo_2.png" alt="Klient2"></div>
+        <div><img src="./img/logo_3.png" alt="Klient3"></div>
+        <div class="pt-6"><img src="./img/logo_4.png" alt="Klient4"></div>
+        <div><img src="./img/logo_5.png" alt="Klient5"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- #contact -->
+  <section id="contact">
+    <!-- form -->
+    <div class="p-1 bg-primary contact-form">
+      <h2 class="m-heading">Võta meiega ühendust!</h2>
+      <p>Täida allolev vorm</p>
+      <form action="placeholder.php">
+        <div class="form-group">
+          <label for="name">Nimi</label>
+          <input type="text" id="name" placeholder="Sisesta oma nimi">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="Sisesta oma e-mail">
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefoni number</label>
+          <input type="phone" id="phone" placeholder="Sisesta oma telefoni number">
+        </div>
+        <div class="form-group">
+          <label for="message">Sõnum</label>
+          <textarea id="message" placeholder="Sisesta oma sõnum"></textarea>
+        </div>
+        <input type="submit" value="Saada" class="btn btn-dark">
+      </form>
+    </div>
+    <!-- map -->
+    <div id="map" class="contact-map">
+    </div>
+  </section>
+
+
+  <!-- #footer -->
+  <footer id="footer" class="bg-dark text-center py-3">
+    <img src="./img/firma_logo.png" alt="Firma logo">
+    <p>Kõik õigused on kaitstud &copy; 2023</p>
+  </footer>
+</body>
+
+</html>

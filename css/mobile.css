@@ -1,0 +1,91 @@
+
+/*HORIZOINTAL SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 4px;
+    border: solid #474747;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+    border: solid 1px #ffffff;
+    border-radius: 2px;
+  }
+::-webkit-scrollbar-thumb {
+    background: #eb9411;
+    border-radius: 2px;
+  }
+  
+/*NAVBAR*/
+#navbar {
+    background: #333;
+    color: #fff;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+}
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin: 0.75rem 0rem;
+    overflow: auto;
+    white-space: nowrap;
+}
+#navbar ul li {
+    display: inline-block;
+    margin: 1rem 0;
+}
+#navbar ul li a {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul li a:hover {
+    background: #eb9411;
+    color: #333;
+    border-radius: 5px;
+    font-weight: 600;
+    height: 70%;
+}
+#cont-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*WHAT*/
+#what .items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+/*WHO*/
+#who {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#who div {
+    flex: 100%;
+}
+
+/*CLIENTS*/
+#clients .items {
+    display: flex;
+    justify-content: center;
+}
+
+/*CONTACT*/
+#contact {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
